@@ -1,0 +1,149 @@
+
+<!--
+José Eduardo Hirales Núñez
+Universidad Autónoma de Baja California Sur
+Programación Avanzada en Internet IDS TV
+-->
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="600" height="500" style="border:1px solid grey"></canvas>
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+// FIRST SQUARE
+ctx.beginPath();
+ctx.moveTo(20, 20);
+ctx.lineTo(20, 70);
+ctx.lineTo(70, 70);
+ctx.lineTo(70, 20); 
+ctx.lineTo(20, 20); 
+ctx.strokeStyle = "pink";
+ctx.stroke();
+ctx.fillStyle = "pink"; 
+ctx.fill();
+
+// SECOND SQUARE
+ctx.beginPath();
+ctx.moveTo(100, 100);
+ctx.lineTo(100, 160);
+ctx.lineTo(160, 160);
+ctx.lineTo(160, 100);
+ctx.lineTo(100, 100); 
+ctx.strokeStyle = "ORANGE";
+ctx.stroke();
+ctx.fillStyle = "ORANGE"; 
+ctx.fill();
+
+// THIRD SQUARE
+ctx.beginPath();
+ctx.moveTo(60, 60);
+ctx.lineTo(60, 115);
+ctx.lineTo(115, 115);
+ctx.lineTo(115, 60);
+ctx.lineTo(60, 60);
+ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";  // Rojo translúcido
+ctx.stroke();
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)"; 
+ctx.fill();
+
+// FOUR SQUARE
+ctx.beginPath();
+ctx.moveTo(140, 140);
+ctx.lineTo(140, 200);
+ctx.lineTo(200, 200);
+ctx.lineTo(200, 140);
+ctx.lineTo(140, 140); 
+ctx.strokeStyle = "black";
+ctx.stroke();
+
+// FIFTH SQUARE
+ctx.beginPath();
+ctx.moveTo(180, 180);
+ctx.lineTo(180, 245);
+ctx.lineTo(245, 245);
+ctx.lineTo(245, 180);
+ctx.lineTo(180, 180); 
+ctx.strokeStyle = "red";
+ctx.lineWidth = 4;
+ctx.stroke();
+
+// TRIANGLE OVER OTHER SHAPES
+ctx.beginPath();
+ctx.moveTo(170, 260);
+ctx.lineTo(170, 170);
+ctx.lineTo(250, 90);
+ctx.lineTo(170, 260); 
+ctx.strokeStyle = "red";
+ctx.lineWidth = 4; 
+ctx.stroke();
+ctx.fillStyle = "rgba(135, 206, 250, 0.5)"; 
+ctx.fill();
+
+//NEW PART OF THE HOMEWORK
+// CIRLE
+ctx.beginPath();
+ctx.arc(100, 300, 50, 0, 2 * Math.PI); 
+ctx.strokeStyle = "#008913"; 
+ctx.stroke();
+ctx.fillStyle = "#82FE93"; 
+ctx.fill();
+
+//CIRCLE WITH BACKGROUND
+ctx.beginPath();
+ctx.arc(170, 300, 50, 0, 2 * Math.PI);
+ctx.fillStyle = "rgba(135, 206, 250, 0.5)"; 
+ctx.fill();
+
+//MOUTH OF THE DRAW
+ctx.beginPath();
+ctx.arc(100, 300, 20, 0, 1 * Math.PI);
+ctx.strokeStyle = "rgba(255, 0, 0, 0.5)"; 
+ctx.stroke();
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)"; 
+ctx.fill();
+
+//EYES OF THE DRAW
+ctx.beginPath();
+ctx.arc(80, 280, 5, 0, 2 * Math.PI);
+ctx.strokeStyle = "BLACK"; 
+ctx.stroke();
+ctx.fillStyle = "WHITE"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(120, 280, 5, 0, 2 * Math.PI);
+ctx.strokeStyle = "BLACK"; 
+ctx.stroke();
+ctx.fillStyle = "WHITE"; 
+ctx.fill();
+
+// TRIANGLE WITH GRADIENT
+ctx.beginPath();
+ctx.moveTo(450, 400);
+ctx.lineTo(550, 400);
+ctx.lineTo(500, 300);
+ctx.closePath();
+
+// RECTANGLE WITHH GRADIENT 
+const grd = ctx.createLinearGradient(400, 150, 550, 150); 
+grd.addColorStop(0, "pink");
+grd.addColorStop(1, "white");
+ctx.fillStyle = grd;
+ctx.fillRect(400, 230, 150, 100); 
+ctx.strokeStyle = "pink";
+ctx.strokeRect(400, 230, 150, 100);
+
+//RECTANGLE WITH RADIAL GRADIENT
+const radialGrd = ctx.createRadialGradient(450, 400, 10, 500, 450, 100);
+radialGrd.addColorStop(0, "red");
+radialGrd.addColorStop(0.5, "yellow");
+radialGrd.addColorStop(1, "blue");
+
+ctx.fillStyle = radialGrd;
+ctx.fillRect(400, 350, 150, 100); // 
+
+</script> 
+</body>
+</html>
