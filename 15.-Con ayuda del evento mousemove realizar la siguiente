@@ -1,0 +1,86 @@
+<!--
+José Eduardo Hirales Núñez
+Universidad Autónoma de Baja California Sur
+Programación Avanzada en Internet IDS TV
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+     
+        #mycanvas {
+            background-color: white;
+        }
+        body {
+            background-color: #333;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <canvas id="mycanvas" width="700" height="600"></canvas>
+</head>
+<body>
+    <script>
+    
+        var canvas = document.getElementById('mycanvas');
+        var ctx = canvas.getContext('2d');
+        var dibujando = false;  
+        var mouseOutside = false;  
+        var randomColor = '#000000';  
+        var randomShape = ''; 
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        function getRandomShape() {
+            var shapes = ['circle', 'square', 'triangle'];
+            return shapes[Math.floor(Math.random() * shapes.length)];
+        }
+
+        function drawShape(x, y, color, shape) {
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            switch(shape) {
+                case 'circle':
+                    ctx.arc(x, y, 50, 0, 2 * Math.PI);
+                    break;
+                case 'square':
+                    ctx.fillRect(x - 50, y - 50, 100, 100);
+                    break;
+                case 'triangle':
+                    ctx.moveTo(x, y - 50);
+                    ctx.lineTo(x - 50, y + 50);
+                    ctx.lineTo(x + 50, y + 50);
+                    ctx.closePath();
+                    break;
+            }
+            ctx.fill();
+        }
+        randomColor = getRandomColor();
+        randomShape = getRandomShape();
+        canvas.addEventListener("mousedown", (e) => {
+            dibujando = true;  
+            drawShape(e.layerX, e.layerY, randomColor, randomShape); 
+        });
+
+        canvas.addEventListener("mousemove", (e) => {
+            if (dibujando && !mouseOutside) {
+                ctx.fillStyle = '#000000'; 
+                ctx.beginPath();
+                ctx.arc(e.layerX, e.layerY, 5, 0, 2 * Math.PI); 
+                ctx.fill();
+            }
+        });
+        canvas.addEventListener("mouseout", () => {
+            mouseOutside = true; 
+            randomColor = getRandomColor();
+            randomShape = getRandomShape();
+        });
+        canvas.addEventListener("mouseover", () => {
+            mouseOutside = false;
+        });
+    </script>
+</body>
+</html>
