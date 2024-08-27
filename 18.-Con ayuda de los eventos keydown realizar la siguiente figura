@@ -1,0 +1,52 @@
+
+<!--
+José Eduardo Hirales Núñez
+Universidad Autónoma de Baja California Sur
+Programación Avanzada en Internet IDS TV
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+        #mycanvas {
+            background-color: white;
+        }
+        body {
+            background-color: #333;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueve el Cuadrado</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="700" height="600"></canvas>
+    <script>    
+        var canvas = document.getElementById('mycanvas');
+        var ctx = canvas.getContext('2d');
+        var x = 30;
+        var y = 30;
+        var size = 30;
+
+        function dibujarCuadrado() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "red";
+            ctx.fillRect(x, y, size, size);
+        }
+
+        dibujarCuadrado();
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'w') {
+                y -= 10;
+            } else if (e.key === 's') {
+                y += 10;
+            } else if (e.key === 'a') {
+                x -= 10;
+            } else if (e.key === 'd') {
+                x += 10;
+            }
+            dibujarCuadrado();
+        });
+    </script>
+</body>
+</html>
