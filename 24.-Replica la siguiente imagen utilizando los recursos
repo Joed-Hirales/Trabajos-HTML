@@ -1,0 +1,93 @@
+<!--
+José Eduardo Hirales Núñez
+Universidad Autónoma de Baja California Sur
+Programación Avanzada en Internet IDS TV
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="1750" height="850" style="border:1px solid rgb(7, 0, 0); background-color: #2000a0;"></canvas>
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+//primer capa de suelo
+ctx.beginPath();
+ctx.rect(0, 609, 1797, 30); 
+ctx.fillStyle = "#80e000";  
+ctx.fill();
+ctx.stroke();
+//segunda capá del suelo
+ctx.beginPath();
+ctx.rect(0, 639, 1797, 30); 
+ctx.fillStyle = "#40a000";  
+ctx.fill();
+ctx.stroke();
+//tercera capa del sueño
+ctx.beginPath();
+ctx.rect(0, 669, 1797, 30); 
+ctx.fillStyle = "#006000";  
+ctx.fill();
+ctx.stroke();
+
+//suelo del escenario 
+ctx.beginPath();
+ctx.rect(0, 700, 1797, 197); 
+ctx.fillStyle = "#c56400";  
+ctx.fill(); 
+ctx.stroke();
+
+//palo palmera
+ctx.beginPath();
+ctx.rect(600, 238, 35, 370); 
+ctx.fillStyle = "#804000";  
+ctx.fill(); 
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(500, 250); 
+ctx.lineTo(600, 50);  
+ctx.lineTo(700, 250); 
+ctx.closePath(); 
+
+ctx.fillStyle = "green"; 
+ctx.fill(); 
+ctx.strokeStyle = "black"; 
+ctx.stroke(); 
+
+//flor
+ctx.beginPath();
+ctx.rect(1400, 408, 20, 200); 
+ctx.fillStyle = "#378505";  
+ctx.fill(); 
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(1400, 380, 50, 0, 2 * Math.PI); 
+ctx.fillStyle = "#bd8b08"; 
+ctx.fill();
+ctx.stroke();
+
+//circulos 
+ctx.beginPath();
+ctx.arc(500, 500, 50, 0, 2 * Math.PI); 
+ctx.strokeStyle = "#ffff00"; 
+ctx.lineWidth = 10;
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(350, 500, 50, 0, 2 * Math.PI); 
+ctx.strokeStyle = "#ffff00"; 
+ctx.lineWidth = 10;
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(200, 500, 50, 0, 2 * Math.PI); 
+ctx.strokeStyle = "#ffff00"; 
+ctx.lineWidth = 10;
+ctx.stroke();
+
+</script> 
+</body>
+</html>
