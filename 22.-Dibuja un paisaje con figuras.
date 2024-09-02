@@ -1,0 +1,82 @@
+<!--
+José Eduardo Hirales Núñez
+Universidad Autónoma de Baja California Sur
+Programación Avanzada en Internet IDS TV
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="1100" height="900" style="border:1px solid rgb(7, 0, 0); background-color: #74d8f9;"></canvas>
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+//casa
+ctx.beginPath();
+ctx.rect(450, 200, 550, 500); 
+ctx.fillStyle = "#C29340";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+//sombrita
+ctx.beginPath();
+ctx.rect(400, 200, 550, 500); 
+ctx.fillStyle = "#FFBD49";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5; 
+ctx.stroke();
+
+//techo 
+ctx.beginPath();
+ctx.moveTo(400, 200); 
+ctx.lineTo(1000, 200); 
+ctx.lineTo(700, 50); 
+ctx.closePath(); 
+ctx.fillStyle = "#A52A2A"; 
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+//puerta
+ctx.beginPath();
+ctx.rect(500, 450, 200,300); 
+ctx.fillStyle = "#312104";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5; 
+ctx.stroke();
+
+//pasto 
+ctx.beginPath();
+ctx.rect(0, 700, 1097, 197); 
+ctx.fillStyle = "#62FF49";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+//cosa de la puerta
+ctx.beginPath();
+ctx.arc(670, 580, 10, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#FABE00"; 
+ctx.fill();
+
+//ventanal
+ctx.beginPath();
+ctx.rect(500, 400, 200,50); 
+ctx.fillStyle = "#FCCC33";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+</script> 
+</body>
+</html>
