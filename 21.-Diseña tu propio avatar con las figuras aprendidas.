@@ -1,0 +1,189 @@
+<!--
+José Eduardo Hirales Núñez
+Universidad Autónoma de Baja California Sur
+Programación Avanzada en Internet IDS TV
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="1700" height="900" style="border:1px solid rgb(7, 0, 0)"></canvas>
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+//cuerpo
+ctx.beginPath();
+ctx.rect(600, 100, 250, 300); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "#FFF300";  // Color de relleno rojo
+ctx.fill();
+ctx.strokeStyle = "#000000";  // Color del borde negro
+ctx.lineWidth = 5;  // Grosor del borde
+ctx.stroke();
+
+//ojos
+ctx.beginPath();
+ctx.arc(680, 180, 40, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "white"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(680, 180, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#00AFF0"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(680, 180, 5, 0, 2 * Math.PI); 
+ctx.fillStyle = "black"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(770, 180, 40, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "white"; 
+ctx.fill();
+
+
+ctx.beginPath();
+ctx.arc(770, 180, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#00AFF0"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(770, 180, 5, 0, 2 * Math.PI); 
+ctx.fillStyle = "black"; 
+ctx.fill();
+
+
+//nariz
+ctx.beginPath();
+ctx.arc(725, 230, 15, 9.4, 0 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+
+//boca
+ctx.beginPath();
+ctx.arc(725, 230, 50, 0, 1 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+
+//dientes
+ctx.beginPath();
+ctx.rect(707, 280, 15, 15); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "white";  // Color de relleno rojo
+ctx.fill();
+ctx.strokeStyle = "#000000";  // Color del borde negro
+ctx.lineWidth = 5;  // Grosor del borde
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(730, 280, 15, 15); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "white";  // Color de relleno rojo
+ctx.fill();
+ctx.strokeStyle = "#000000";  // Color del borde negro
+ctx.lineWidth = 5;  // Grosor del borde
+ctx.stroke();
+
+
+//camisa
+ctx.beginPath();
+ctx.rect(600, 400, 250, 40); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "white";  // Color de relleno rojo
+ctx.fill();
+ctx.strokeStyle = "#000000";  // Color del borde negro
+ctx.lineWidth = 5;  // Grosor del borde
+ctx.stroke();
+
+//corbata
+ctx.beginPath();
+ctx.rect(720, 400, 20, 40); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "red";  // Color de relleno rojo
+ctx.fill();
+ctx.strokeStyle = "#000000";  // Color del borde negro
+ctx.lineWidth = 5;  // Grosor del borde
+ctx.stroke();
+
+//pantalon
+ctx.beginPath();
+ctx.rect(600, 440, 250, 80); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "#502F03";  // Color de relleno rojo
+ctx.fill();
+ctx.strokeStyle = "#000000";  // Color del borde negro
+ctx.lineWidth = 5;  // Grosor del borde
+ctx.stroke();
+
+//cinturon
+ctx.beginPath();
+ctx.rect(620, 460, 24, 10); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "black";  // Color de relleno rojo
+ctx.fill();
+
+ctx.beginPath();
+ctx.rect(670, 460, 24, 10); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "black";  // Color de relleno rojo
+ctx.fill();
+
+ctx.beginPath();
+ctx.rect(720, 460, 24, 10); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "black";  // Color de relleno rojo
+ctx.fill();
+
+ctx.beginPath();
+ctx.rect(770, 460, 24, 10); // Coordenadas (x, y) y tamaño (ancho, alto)
+ctx.fillStyle = "black";  // Color de relleno rojo
+ctx.fill();
+
+//brazos
+ctx.beginPath();        
+ctx.lineWidth = "5";
+ctx.strokeStyle = "black";
+ctx.moveTo(600, 275);
+ctx.lineTo(450, 150);
+ctx.stroke();
+
+ctx.beginPath();        
+ctx.lineWidth = "5";
+ctx.strokeStyle = "black";
+ctx.moveTo(850, 275);
+ctx.lineTo(990, 150);
+ctx.stroke();
+
+//piernas
+ctx.beginPath();        
+ctx.lineWidth = "5";
+ctx.strokeStyle = "black";
+ctx.moveTo(670, 517);
+ctx.lineTo(670, 650);
+ctx.stroke();
+
+ctx.beginPath();        
+ctx.lineWidth = "5";
+ctx.strokeStyle = "black";
+ctx.moveTo(780, 517);
+ctx.lineTo(780, 650);
+ctx.stroke();
+
+//zapatos 
+ctx.beginPath();
+ctx.ellipse(620, 650, 50, 15, Math.PI / 55, 0, 2 * Math.PI);
+ctx.fillStyle = "black"; 
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.ellipse(830, 650, 50, 15, Math.PI / 55, 0, 2 * Math.PI);
+ctx.fillStyle = "black"; 
+ctx.fill();
+ctx.stroke();
+
+
+</script> 
+</body>
+</html>
