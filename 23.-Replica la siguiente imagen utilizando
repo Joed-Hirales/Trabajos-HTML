@@ -1,0 +1,195 @@
+<!--
+José Eduardo Hirales Núñez
+Universidad Autónoma de Baja California Sur
+Programación Avanzada en Internet IDS TV
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="1800" height="900" style="border:1px solid rgb(7, 0, 0); background-color: #9ee4fc;"></canvas>
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+//suelo del escenario 
+ctx.beginPath();
+ctx.rect(0, 700, 1797, 197); 
+ctx.fillStyle = "#ffc4b5";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+//primer cuadro 
+ctx.beginPath();
+ctx.rect(50, 200, 80, 80);
+ctx.fillStyle = "#ff8a4e";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+//segundo y tercer cuadro juntos
+ctx.beginPath();
+ctx.rect(230, 50, 80, 80); 
+ctx.fillStyle = "#ff8a4e";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(315, 50, 80, 80); 
+ctx.fillStyle = "#ff8a4e";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+
+//sombra y figura grande
+ctx.beginPath();
+ctx.rect(700, 250, 300, 450); 
+ctx.fillStyle = "black";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(650, 200, 300, 500); 
+ctx.fillStyle = "#5bb6fa";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5; 
+ctx.stroke();
+
+//circulos de la figura grande 
+ctx.beginPath();
+ctx.arc(690, 230, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(910, 230, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(690, 670, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(910, 670, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+//sombra y figura pequeña
+ctx.beginPath();
+ctx.rect(500, 450, 300, 250); 
+ctx.fillStyle = "black";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(450, 400, 300, 300); 
+ctx.fillStyle = "#e98574";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5; 
+ctx.stroke();
+
+//circulos de la figura pequeña 
+ctx.beginPath();
+ctx.arc(490, 450, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(700, 450, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(490, 670, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(700, 670, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+//sombra y figura del tubo
+
+ctx.beginPath();
+ctx.rect(1150, 400, 230, 300); 
+ctx.fillStyle = "#008800";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5; 
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(1100, 400, 320, 100); 
+ctx.fillStyle = "#008800";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5; 
+ctx.stroke();
+
+//Cuadrado de la esquina 
+ctx.beginPath();
+ctx.rect(1500, 350, 300, 350); 
+ctx.fillStyle = "#75ffae";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5; 
+ctx.stroke();
+
+//circulos de la figura pequeña 
+ctx.beginPath();
+ctx.arc(1550, 380, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(1550, 670, 15, 0, 2 * Math.PI); 
+ctx.strokeStyle = "black"; 
+ctx.stroke();
+ctx.fillStyle = "#bfbfbf"; 
+ctx.fill();
+
+//cuadrado del final
+ctx.beginPath();
+ctx.rect(1630, 100, 80, 80);
+ctx.fillStyle = "#ff8a4e";  
+ctx.fill();
+ctx.strokeStyle = "#000000";  
+ctx.lineWidth = 5;  
+ctx.stroke();
+</script> 
+</body>
+</html>
