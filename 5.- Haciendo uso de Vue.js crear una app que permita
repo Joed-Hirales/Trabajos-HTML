@@ -1,0 +1,71 @@
+<!--
+José Eduardo Hirales Núñez
+Universidad Autónoma de Baja California Sur
+Programación Avanzada en Internet IDS TV
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <h3>
+            Hola mundo: {{name_app}}
+        </h3>
+        <button @click="contador++">
+            tocame: {{contador}}
+        </button>
+        <form>
+            <fieldset>
+                <label>
+                    <input type="text" v-model="username" placeholder="Su nombre es:" name="">
+
+                </label>
+            </fieldset>
+            <label>
+                tu nombre es: <span> {{username}} </span>
+            </label>
+        </form>
+        <hr>
+        <form>
+            <input type="number" v-model="num1">
+            <br>
+            <input type="text" v-model="num2">
+            <br>
+            <button type="button" v-on:click="resultado=num1+2">
+                sumar
+            </button>
+        </form>
+        <label>
+            {{resultado}}
+        </label>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const {createApp,ref} = Vue
+        createApp({
+            setup(){
+                const name_app = ref('Primera tarea de vue.js')
+                const contador = ref(0)
+                const username = ref('')
+                const num1 = ref('')
+                const num2 = ref('')
+                const resultado = ref(0)
+                return {
+                    name_app,
+                    contador,
+                    username,
+                    num1,
+                    num2,
+                    resultado,
+                    }
+            }
+        }).mount('#main')
+    </script>
+</body>
+</html>
